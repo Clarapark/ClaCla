@@ -3,7 +3,7 @@ Stack and Queue
 
 ### Stack
 
-![](stack2.png) - 무언가를 쌓는다라는 의미를 갖는 자료구조 - 넣는 방향성 ▼ 빼는 방향성 ▲ - 일반적으로 **Last In First Out** (후입선출)이라 부름 - 사용되는 함수로는 Push와 Pop이 있음 (Push는 입력, Pop은 삭제)
+![](https://github.com/Clarapark/ClaCla/blob/master/stack2.png) - 무언가를 쌓는다라는 의미를 갖는 자료구조 - 넣는 방향성 ▼ 빼는 방향성 ▲ - 일반적으로 **Last In First Out** (후입선출)이라 부름 - 사용되는 함수로는 Push와 Pop이 있음 (Push는 입력, Pop은 삭제)
 
 ##### <예외처리 부분>
 
@@ -12,7 +12,7 @@ Stack and Queue
 
 ### Queue
 
-![](queue2.png) - 대기 행렬, 줄을 서서 기다리다의 의미 - 넣는 방향성 ◀ 빼는 방향성 ◀ - 스택과 반대로 **First In First Out** (선입선출)이라 부름
+![](https://github.com/Clarapark/ClaCla/blob/master/queue2.png) - 대기 행렬, 줄을 서서 기다리다의 의미 - 넣는 방향성 ◀ 빼는 방향성 ◀ - 스택과 반대로 **First In First Out** (선입선출)이라 부름
 
 ##### <예외처리 부분>
 
@@ -23,7 +23,7 @@ Stack and Queue
 
 -	먼저들어온 데이터가 Pop이 되면 다른 데이터들을 차례대로 땡겨주어야 함 (소수의 자료인 경우 상관이 없지만 많은 데이터의 경우 연산에 많은 시간 소요) ==> 해결하기 위해 나온 것이 원형 큐, 순환 큐, 환형 큐 라고 불리움.
 
-![](circular_queue_.png) - 배열을 직선으로 보는게 아니라 원형으로 보는 것 - 배열을 가득 채우지 말고 배열의 길이가 n일 경우 n-1개 채워졌을 때 가득찬 것으로 함
+![](https://github.com/Clarapark/ClaCla/blob/master/circular_queue_.png) - 배열을 직선으로 보는게 아니라 원형으로 보는 것 - 배열을 가득 채우지 말고 배열의 길이가 n일 경우 n-1개 채워졌을 때 가득찬 것으로 함
 
 -	F와 R이 같은 위치를 가르킬 때 : 원형 큐가 텅텅 빈 상태
 -	F가 R이 가리키는 위치의 앞을 가리킬 때 : 원형 큐가 가득 찬 상태  
