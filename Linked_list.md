@@ -8,7 +8,7 @@ Linked list
 
 ### 단순 연결 리스트(체인)
 
-![](simple_linkedlist.gif)
+![](image/simple_linkedlist.gif)
 
 -	노드가 하나의 링크 필드에 의해서 다음 노드와 연결되어 있는 리스트
 
@@ -33,7 +33,7 @@ private:
 
 ### 원형 연결 리스트(Circular Linked List)
 
-![](circular_linkedlist.jpg)
+![](image/circular_linkedlist.jpg)
 
 -	마지막 노드가 첫 노드와 연결되어 있는 리스트
 
@@ -63,7 +63,7 @@ private:
 
 ### 연결리스트로 구현한 스택
 
-![](linkedlist_stack.jpg)
+![](image/linkedlist_stack.jpg)
 
 **배열로 구현한 스택과 연결리스트기법을 추가한 스택의 차이**
 
@@ -77,7 +77,7 @@ private:
 
 ### 연결리스트로 구현한 큐
 
-![](linkedlist_queue.jpg)
+![](image/linkedlist_queue.jpg)
 
 **배열로 구현한 큐와 연결리스트기법을 추가한 큐의 차이**
 
@@ -89,13 +89,13 @@ private:
 -	다항식의 노드는 **계수(coef), 지수(expon), 링크(link)** 필드로 구성
 -	두 개의 리스트 a, b에 각각 다항식 노드를 연결하고 a와b의 항들을 따라 순회하면서 각 항들을 더하면 됨.
 
-**a와 b가 가리키는 항의 지수에 따라 3가지 경우**
+**a와 b가 가리ß키는 항의 지수에 따라 3가지 경우**
 
 1.	a.expon == b.expon : 새로운 항을 만들어 다항식 리스트 c에 추가
 2.	a.expon < b.expon : b항을 다항식 리스트 c에 추가하고 b만 다음 노드로 이동
 3.	a.expon > b.expon : a항을 다항식 리스트 c에 추가하고 a만 다음 노드로 이동
 
-![](addpoly1.png)![](addpoly2.png) ![](addpoly3.png)
+![](image/addpoly1.png)![](image/addpoly2.png) ![](image/addpoly3.png)
 
 -	두 리스트중 하나가 NULL이 될때까지 반복, 둘 중 하나가 NULL이 되면 남은 다항식 노드는 다항식 리스트 c에 전부 추가
 
@@ -106,7 +106,7 @@ private:
 
 ### 이중 연결 리스트(Double Linked List)
 
-![](double_linkedlist.png)
+![](image/double_linkedlist.png)
 
 -	노드와 노드가 양방향으로 연결되어 있는 리스트
 
@@ -114,11 +114,11 @@ private:
 
 -	노드의 반은 next를 이용해 탐색하고, 반은 previous를 이용해 탐색 -> 탐색해야하는 element가 반으로 줄어듬
 
-![](double_linkedlist2.png)
+![](image/double_linkedlist2.png)
 
 -	노드를 탐색하는 방향이 양쪽으로 가능하다
 
-![](double_linkedlist1.png)
+![](image/double_linkedlist1.png)
 
 **단점**
 
