@@ -14,6 +14,60 @@ Stack and Queue
 -	스택에 자료가 없을 때 Pop을 하면 자료가 없기에 뺄 것도 없음. 이때 Err를 **Stack Underflow** 라고 함
 -	스택의 크기, 배열의 크기 이상의 자료를 Push할 때도 들어갈 공간이 없으므로 Err 발생시킴. 이때 Err를 **Stack Overflow** 라고 함
 
+```c++
+template <class T>
+class Stack {
+ public:
+	 Stack(int stackCapacity = 10);
+	 bool IsEmpty() const;
+	 T& Top() const;
+	 void Push(const T& item);
+	 void Pop();
+	 ~Stack(){}
+
+ private:
+	 T* stack;
+	 int top;
+	 int capacity;
+};
+
+Stack<T>::Stack(int stackCapacity) : capacity(stackCapacity) {
+	if (capacity < 1) {
+		throw "Stack capacity must be > 0";
+	}
+		stack = new T[capacity];
+		top = -1;
+}
+Stack<T>::~Stack() {
+	delete [] stack;
+}
+
+bool Stack<T>::IsEmpty() const {
+	return top == -1;
+}
+
+T& Stack<T>::Top() const {
+	if (IsEmpty()) {
+		throw "Stack is empty";
+	}
+		return stack[top];
+}
+
+void Stack<T>::Push(const T& x) {
+	if (top >= capacity - 1) {
+		return -1;
+	}
+	stack[++top] = x;
+}
+
+void Stack<T>::Pop() {
+	if (IsEmpty()) {
+		throw "Stack is empty. Cannot delete";
+	}
+		stack[top--].~T();
+}
+```
+
 ### Queue
 
 ![](image/queue2.png)

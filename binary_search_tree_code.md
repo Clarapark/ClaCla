@@ -83,9 +83,8 @@ template <typename T>
 void BinarySearchTree<T>::internal_traverse_pre_order(Node<T>* current, function<void(T&)>& f) {
   if (current == nullptr) {
     return;
-  } f
-
-  (current->data);
+  }
+  f(current->data);
   internal_traverse_pre_order(current->left, f);
   internal_traverse_pre_order(current->right, f);
 }
