@@ -53,18 +53,18 @@ T& Stack<T>::Top() const {
 		return stack[top];
 }
 
-void Stack<T>::Push(const T& x) {
-	if (top >= capacity - 1) {
-		return -1;
+void Stack<T>::Push(const T& val) {
+	if (top == capacity - 1) {
+		throw "There is no space to push it";
 	}
-	stack[++top] = x;
+	stack[++top] = val;
 }
 
 void Stack<T>::Pop() {
 	if (IsEmpty()) {
 		throw "Stack is empty. Cannot delete";
 	}
-		stack[top--].~T();
+	return stack[top--];
 }
 ```
 
