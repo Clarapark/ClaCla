@@ -7,12 +7,7 @@ Stack and Queue
 
 -	무언가를 쌓는다라는 의미를 갖는 자료구조
 -	넣는 방향성 ▼ 빼는 방향성 ▲ - 일반적으로 **Last In First Out** (후입선출)이라 부름
-	-	사용되는 함수로는 Push와 Pop이 있음 (Push는 입력, Pop은 삭제)
-
-##### <예외처리 부분>
-
--	스택에 자료가 없을 때 Pop을 하면 자료가 없기에 뺄 것도 없음. 이때 Err를 **Stack Underflow** 라고 함
--	스택의 크기, 배열의 크기 이상의 자료를 Push할 때도 들어갈 공간이 없으므로 Err 발생시킴. 이때 Err를 **Stack Overflow** 라고 함
+-	사용되는 함수로는 Push와 Pop이 있음 (Push는 입력, Pop은 삭제)
 
 ```c++
 template <class T>
@@ -21,7 +16,7 @@ class Stack {
 	 Stack(int stackCapacity = 10);
 	 bool IsEmpty() const;
 	 T& Top() const;
-	 void Push(const T& item);
+	 void Push(const T& val);
 	 void Pop();
 	 ~Stack(){}
 
@@ -68,6 +63,11 @@ void Stack<T>::Pop() {
 }
 ```
 
+##### <예외처리 부분>
+
+-	스택에 자료가 없을 때 Pop을 하면 자료가 없기에 뺄 것도 없음. 이때 Err를 **Stack Underflow** 라고 함
+-	스택의 크기, 배열의 크기 이상의 자료를 Push할 때도 들어갈 공간이 없으므로 Err 발생시킴. 이때 Err를 **Stack Overflow** 라고 함
+
 ### Queue
 
 ![](image/queue2.png)
@@ -75,6 +75,54 @@ void Stack<T>::Pop() {
 -	대기 행렬, 줄을 서서 기다리다의 의미
 -	넣는 방향성 ◀ 빼는 방향성 ◀
 -	스택과 반대로 **First In First Out** (선입선출)이라 부름
+
+```c++
+template <class T>
+class Queue {
+ public:
+	 Queue(int queueCapacity = 10);
+	 bool IsEmpty() const;
+	 void Push(const T& val);
+	 void Pop();
+
+ private:
+	 T* queue;
+	 int front, rear, capacity;
+};
+
+Queue<T>::Queue(int queueCapacity) : capacity (queueCapacity) {
+	if (capacity < 1) {
+		throw "Queue capacity must be > 0"
+	}
+	queue = new T[queue];
+	front = rear - 0;
+}
+
+Queue<T>::~Queue() {
+	delete [] queue;
+}
+
+bool Queue<T>::IsEmpty() {
+	return front == rear;
+}
+
+void Queue<T>::Push(const& val) {
+	if ((rear + 1) % capacity == front) {
+
+	}
+	rear = (rear + 1) % capacity;
+	queue[rear] = val;
+}
+
+void Queue<T>::Pop() {
+	if (IsEmpty()) {
+		throw "Queue is empty. Cannot delete"
+	}
+	front = (front + 1) % capacity;
+	return queue[front];
+}
+
+```
 
 ##### <예외처리 부분>
 
