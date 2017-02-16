@@ -13,17 +13,17 @@ Stack and Queue
 template <class T>
 class Stack {
  public:
-	 Stack(int stackCapacity = 10);
-	 bool IsEmpty() const;
-	 T& Top() const;
-	 void Push(const T& val);
-	 void Pop();
-	 ~Stack(){}
+  Stack(int stackCapacity = 10);
+  bool IsEmpty() const;
+  T& Top() const;
+  void Push(const T& val);
+  void Pop();
+  ~Stack();
 
  private:
-	 T* stack;
-	 int top;
-	 int capacity;
+	 T* stack_;
+	 int top_;
+	 int capacity_;
 };
 
 Stack<T>::Stack(int stackCapacity) : capacity(stackCapacity) {
@@ -108,7 +108,7 @@ bool Queue<T>::IsEmpty() {
 
 void Queue<T>::Push(const& val) {
 	if ((rear + 1) % capacity == front) {
-
+채우자
 	}
 	rear = (rear + 1) % capacity;
 	queue[rear] = val;
@@ -142,7 +142,7 @@ void Queue<T>::Pop() {
 
 -	F가 R이 가리키는 위치의 앞을 가리킬 때 : 원형 큐가 가득 찬 상태
 
-### 수식
+### 수식 (계산하는방법다시)
 
 -	사람들은 중위 표기법을 쓰고 컴파일러는 후위 표기법을 사용
 -	스택이 사용됨 why? 연산자가 피연산자보다 나중에 계산되기 때문
