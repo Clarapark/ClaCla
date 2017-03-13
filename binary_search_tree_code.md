@@ -18,9 +18,9 @@ int main(int argc, char* argv[]) {
     }
   };
 
-  function<void(int& value)> printer = [](int& value)->void{
-    std::cout << value << std::endl;
-  };
+  // function<void(int& value)> printer = [](int& value)->void{
+  //   std::cout << value << std::endl;
+  // };
 
   bst.insert(3, comparator);
   bst.insert(2, comparator);
