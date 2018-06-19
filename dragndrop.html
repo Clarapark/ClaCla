@@ -1,0 +1,18 @@
+{% load i18n static sekizai_tags cms_tags sass_tags %}
+
+
+
+<html>
+<head>
+    <script src="{% static 'happytreemall/js/dropzone.js' %}"></script>
+    <script src="/static/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/static/node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
+	<script src="{% static 'happytreemall/js/dragndrop.js' %}"></script>
+    <link href="{% sass_src 'happytreemall/css/dragndrop.scss' %}" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<form action="/" method="post" class="dropzone" id="dropzone-form"></form>
+
+</body>
+</html>
