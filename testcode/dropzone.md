@@ -1,3 +1,3 @@
 - bower install dropzone
 
-- html에 head내에 dropzone.js,dropzoen.css 추가
+- html에 head내에 dropzone.js,dropzone.css 추가
