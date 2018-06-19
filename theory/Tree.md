@@ -3,7 +3,7 @@ Tree
 
 ### Tree?
 
-![](image/Tree1.png)
+![](https://github.com/Clarapark/ClaCla/blob/master/image/Tree1.png)
 
 -	계층적 구조(비선형 구조)를 띄고 있는 자료구조
 -	주된 목적 => **탐색**
